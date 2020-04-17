@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.css">
+    <link rel="icon" href="{% static 'Photos/imageIcon.jpg' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Federo&display=swap" rel="stylesheet">
+    <script src="{% static 'jquery.js' %}"></script>
+    <script src="{% static 'anim.js' %}"></script>
+    <title>Sandesh | Sandy</title>
+</head>
+<body>
+    <nav class="">
+        <span class="nav-handler"><i class="fa fa-angle-double-right"></i></span>
+        <ul>
+            <li class="search-nav"><button type="button" class="searchBtn"></button><i class="fa fa-search"></i><br><span>Search</span></button></li>
+            <li class="home-nav"><a href="#home"><i class="fa fa-home"></i><br><span>Home</span></a></li>
+            <li class="about-nav"><a href="#about"><i class="fa fa-user-alt"></i><br><span>About</span></a></li>
+            <li class="education-nav"><a href="#education"><i class="fa fa-graduation-cap"></i><br><span>Education</span></a></li>
+            <li class="project-nav"><a href="#projects"><i class="fa fa-folder-open"></i><br><span>Projects</span></a></li>
+            <li class="contact-nav"><a href="#contact"><i class="fa fa-address-book"></i><br><span>Contact</span></a></li>
+            <li class="review-nav"><a href="#reviews"><i class="fa fa-comments"></i><br><span>Reviews</span></a></li>
+        </ul>  
+    </nav>
+    <!-- Loading Page -->
+    <div class="loading">
+        <div class="loadingSlide"></div>
+        <img src="{% static 'Photos/web-development.svg' %}" alt="">
+        <h1><span>L</span><span>o</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span><span>.</span><span>.</span><span>.</span></h1>
+    </div>
+    <!-- Loading Page End -->
+
+
+    <!-- Birthday Wish -->
+    <div class="wishCont">
+        <div class="wishBanner">
+            <button class="closeWishBanner"><i class="fa fa-times"></i></button>
+            <h1>Happy Birthday <span>Sandy</span><i class="fa fa-heartbeat"></i></h1>
+            <p class="wishBannerWish">God bless you bro... All the best for 
+                your future... Be happy always...
+            </p>
+            <p class="bwtag"><span>#</span>mixture of Bill gates and
+                Mark Zuckerberg.
+            </p>
+            <p class="bwtag"><span>#</span>future CEO of your own Company</p>
+            <p class="bwfrom"><span>- </span>Prasad</p>
+        </div>
+    </div>
+    <!-- Wish Ends -->
+
+
+    <!-- Search Section -->
+    <div class="searchBase">
+        <button class="searchClose"><i class="fa fa-times"></i></button>
+        <div class="searchContainer">
+          <input type="search" name="" id="searchInput" list="">
+          <button><a href="" class="search"><i class="fa fa-search"></i></a></button>
+          <datalist id='searchDataCont'>
+              <option value="Projects"></option>
+              <option value="about"></option>
+              <option value="skills"></option>
+              <option value="Education"></option>
+              <option value="Home"></option>
+              <option value="Reviews"></option>
+              <option value="contact"></option>
+              <option value="2016"></option>
+              <option value="2018"></option>
+              <option value="2019"></option>
+              <option value="Canara"></option>
+              <option value="Karanagiri"></option>
+              <option value="Shamili"></option>
+              <option value="SSLC"></option>
+              <option value="PUC"></option>
+              <option value="Engineering"></option>
+              <option value="Sandesh"></option>
+              <option value="Address"></option>
+              <option value="Gmail"></option>
+              <option value="Instagram"></option>
+              <option value="GitHub"></option>
+              <option value="Facebook"></option>
+              {% for skill in skills %}
+                 <option value="{{skill.Skill_name.upper}}"></option>
+              {% endfor %}
+
+              {% for name in reviews_names %}
+                 <option value="{{name}}"></option>
+              {% endfor %}
+          </datalist>
+        </div>
+    </div>
+    <!-- Search End -->
+    <section class="home" id='home'>
+        <div class="con">
+            <div class="tag">
+                <p><span id="born">Born</span> <span id="to">TO</span> <span id="code">Code</span></p>
+            </div>
+            <div class="picContainer">
+                <img id="profilePic" src="{% static 'Photos/Image.jpg' %}" alt="">
+            </div>
+            <div class="name">
+                <h1><span id="hi">Hi</span><span id="comma">,</span>
+                    <span id="i">I</span>
+                    <span id="am">am</span>
+                    <span id="sf">S</span><span id="a">A</span><span id="n">N</span><span id="d">D</span><span id="e">E</span><span id="sl">S</span><span id="h">H</span>
+                </h1>
+            </div>
+           
+            <div class="nick">
+                <h2>
+                    <span id="call">Call</span>
+                    <span id="me">me</span>
+                    <span id="sandy">Sandy</span>
+                </h2>
+            </div>
+            <div class="dev">
+                <h3>
+                    <span id="web">Web</span>
+                    <span id=developer>Developer</span>
+                </h3>
+            </div>
+            
+        </div>
+    </section>
+    <section class="about" id='about'>
+        <div class="abouttagCont">
+            <h3 class="abouttag" id='atag'>About</h3>
+        </div>
+        <div class="aboutContainer" id='acont'>
+           <div class="aboutText">
+               <p style="font-family: 'Federo', sans-serif">I am from Shivamogga, Karnataka. Studying
+                 Bachelor of computer Engineering  in Canara Engineerig
+                 college Mangalore, Karnataka. Full stack Web developer
+                 and having some basic knolwedge about Ethical Hacking.
+                  I am so blessed  to have such a good parents and friends.
+                 I feel Proud to  be a Programmer. Love to code and born to code.
+                 I am very interested in learning new Technologies and working with that.
+                 Mother is my world. I have some own principles in my life and I wanted to be like
+                   that at any situation of my life. Life is too short I must achieve
+                  something before getting end. Life should be ends with happiness and
+                 fullfilled dreams. Just waiting for my success.
+               </p>
+           </div>
+        </div>
+
+    </section>
+    <section class="skill" id='skills'>
+        <div class="skilltagCont">
+            <h3 class="skilltag">SKILLS</h3>
+        </div>
+        <div class="skillContainer">
+            {% for skill in skills %}
+            <div class="sboxCont">
+                <div class="sbox"  id='{{ skill.Skill_name }}'>
+                    <span class="id">{{ skill.Skill_num }}</span>
+                    <input type="hidden" name="" value='{{ skill.Skill_percent }}' class='getPercentVal'>
+                    <h1><span class=setPercentVal>0</span><span class="percent">%</span></h1>
+                    <h2 class="skillName">{{skill.Skill_name}}</h2>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+
+    </section>
+    <section class="education" id='education'>
+        <div class="edutagCont">
+            <h3 class="edutag">EDUCATION</h3>
+        </div>
+        <div class="eduContainer">
+            <div class="eduParent ep1">
+                <div class="innerEduDiv inDiv1">
+                    <div class=circle></div>
+                    <div class="eduYear" id='2016'>2016</div>
+                </div>
+                <div class="innerEduDiv inDiv2">
+                    <div class="eduDetailsCont">
+                        <div class="eduName"><h2 id='sslc'>SSLC</h2></div>
+                        <div class="eduAddress">
+                            <p id='Karanagiri'>Govt. High School Karanagiri, Shivamogga District</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="eduParent ep2">
+                <div class="innerEduDiv inDiv1">
+                    <div class=circle></div>
+                    <div class="eduDetailsCont">
+                        <div class="eduName"><h2 id='puc'>PUC</h2></div>
+                        <div class="eduAddress">
+                            <p id='shamili'>Shamili PU College Kidiyoor, Udupi District</p>
+                        </div>
+                    </div> 
+                </div>
+
+
+                <div class="innerEduDiv inDiv2">                    
+                    <div class="eduYear" id='2018'>2018</div>
+                    <a href="https://goo.gl/maps/sKiwgwpghdHkBcEg7" class="LocationTAG1"  target="_blank" >Find &nbsp<i class="fa fa-map-marker-alt"></i></a>
+                </div>
+
+            </div>
+            <div class="eduParent ep3">
+                <div class="innerEduDiv inDiv1">
+                    <div class=circle></div>
+                    <div class="eduYear" id='2019'>2019</div>
+                    <a href="https://goo.gl/maps/aqq7gQhpWHgggLQS7" class="LocationTAG2"  target="_blank" >Find &nbsp<i class="fa fa-map-marker-alt"></i></a>
+                </div>
+                <div class="innerEduDiv inDiv2">
+                    <div class="eduDetailsCont">
+                        <div class="eduName"><h2 id='engineering'>Engineering</h2></div>
+                        <div class="eduAddress">
+                            <p id='canara'>Canara Engineering College Mangalore</p>
+                        </div>
+                    </div>
+                </div>
+           </div>
+            <div class="eduParent ep4">
+                <div class="innerEduDiv inDiv1">
+
+                </div>
+                <div class="innerEduDiv inDiv2">
+                    <a href="https://goo.gl/maps/hzmm6TUsj47NwQDx7" class="LocationTAG3"  target="_blank" >Find &nbsp<i class="fa fa-map-marker-alt"></i></a>
+
+                </div>
+            </div>
+
+           
+        </div>
+    </section>
+    <section class="project" id=projects>
+        <div class="skilltagCont">
+            <h3 class="projecttag">PROJECTS</h3>
+        </div>
+        <div class="projectContainer">
+            {% for project in projects %}
+            <div class="pboxCont">
+                <div class="hiddenProDetail">
+                    <p class="hiddenDetail">{{project.Project_detail}}</p>
+                    <p class="hiddenTechUsed">{{project.Project_tech}}</p>
+                    <div class="hiddenButtonContainer">
+                        {% if project.Project_link %}
+                        <a href="{{project.Project_link}}">visit</a>
+                        {% endif %}
+                        <button class='hiddenClose'>close</button>
+                    </div>
+                </div>
+                <span class="pid">{{project.Project_num}}</span>
+                <h2 class="pName" id='{{project.Project_name.lower}}'>{{project.Project_name}}</h2>
+                <button class="view">View</button>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    <section class="contact" id='contact'>
+        <div class="skilltagCont">
+            <h3 class="contacttag">CONTACT ME</h3>
+        </div>
+        <div class="contactContainer">
+            <div class="innerContact icOne">
+                <h5>Address</h5>
+                <div class="address" id='address'>
+                    <p class="addName" id='sandesh'>Sandesh H.D</p>
+                    <p>Kesavinamane</p>
+                    <p>Hosanagara Taluk</p>
+                    <p>Shivamogga District</p>
+                    <p>PIN - 577418</p>
+                    <p class="go"><a href="https://www.google.com/maps/place/13%C2%B052'24.9%22N+75%C2%B003'51.2%22E/@13.873589,75.0620283,17z/data=!3m1!4b1!4m6!3m5!1s0!7e2!8m2!3d13.873589!4d75.064217" target="_blank">Go <i class="fa fa-arrow-alt-circle-right"></i></a></p>
+
+                </div>
+            </div>
+            <div class="innerContact icTwo">
+                <h5>Keep touch with</h5>
+                <div class="icSocial">
+                    <ul>
+                        <li id='gmail'><a href="mailto: sandeshhd16@gmail.com" target="_blank"><i class="fab fa-google"></i></a></li>
+                        <li id='instagram'><a href="https://www.instagram.com/__mr__a_n_o_n_y_m_o_u_s__" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li id='github'><a href="https://github.com/Sandesh94818" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li id='facebook'><a href="https://www.facebook.com/sandesh.sandzz" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="review" id='reviews'>
+        <div class="skilltagCont">
+            <h3 class="reviewtag">REVIEWS</h3>
+        </div>
+        <div class="reviewContainer">
+            <div class="userReviewPost">
+                <form action="/review" method="post">
+                    {% csrf_token %}
+                    <div class=irOne>
+                        <p class="irOneTitle" id='write'>Write Something About me</p>
+                        <textarea placeholder="Write Here . . ." name="reviewContent" cols="30" rows="7"></textarea>
+                        <div><span class="irTextCount">0</span><span class="irOf"> of </span>200</div>
+                        <button type="button" class="irOneBtn">send <i class="fa fa-paper-plane"></i></button>
+                    </div>
+                    <div class=irTwo>
+                        <p class="irTwoTitle">Your Sweet Name</p>
+                        <input type="text" name="reviewName" id="">
+                        <button type="submit" class="irTwoBtn"><i class="fa fa-paper-plane"></i></button>
+                    </div>
+                    <div class="irThree">
+                        <p>Thank You...</p>
+                    </div>
+                </form>
+            </div>
+            <div class="userReviewGet">
+                {% for review in reviews %}
+                <div class="urCard" id='{{review.Review_name.lower}}'>
+                    <p>{{review.Review_content}}</p>
+                    <p class="urNameCont"><span class="urDate">{{review.Review_time.date}}</span><span>- </span><span class="urName">{{review.Review_name}}</span></p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</body>
+</html>
